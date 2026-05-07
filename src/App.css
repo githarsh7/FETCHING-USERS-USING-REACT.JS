@@ -1,0 +1,265 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background:
+    linear-gradient(135deg, #fdf2f8 0%, #eef2ff 35%, #ecfeff 70%, #fef9c3 100%);
+
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 25px;
+}
+
+/* ===== TITLE ===== */
+.title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 55px;
+  color: #111827;
+  letter-spacing: 1px;
+  position: relative;
+
+  background: linear-gradient(to right, #2563eb, #9333ea, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title::after {
+  content: "";
+  width: 110px;
+  height: 5px;
+
+  background:
+    linear-gradient(to right, #2563eb, #7c3aed, #ec4899);
+
+  display: block;
+  margin: 14px auto 0;
+  border-radius: 999px;
+}
+
+/* ===== CARD WRAPPER ===== */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+/* ===== CARD ===== */
+.card {
+  width: 320px;
+  min-height: 250px;
+  padding: 28px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(255, 255, 255, 0.65)
+    );
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    0 10px 30px rgba(99, 102, 241, 0.12),
+    0 5px 15px rgba(236, 72, 153, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* ===== COLORFUL GLOW ===== */
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  background:
+    radial-gradient(circle, rgba(147, 51, 234, 0.18), transparent 70%);
+
+  top: -100px;
+  right: -80px;
+
+  border-radius: 50%;
+}
+
+.card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  background:
+    radial-gradient(circle, rgba(59, 130, 246, 0.18), transparent 70%);
+
+  bottom: -70px;
+  left: -60px;
+
+  border-radius: 50%;
+}
+
+/* ===== HOVER EFFECT ===== */
+.card:hover {
+  transform: translateY(-14px) scale(1.04);
+
+  box-shadow:
+    0 25px 50px rgba(99, 102, 241, 0.22),
+    0 12px 28px rgba(236, 72, 153, 0.16);
+}
+
+/* ===== CARD CONTENT ===== */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1;
+}
+
+/* ===== USER NAME ===== */
+.card-name {
+  font-size: 27px;
+  font-weight: 700;
+
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 8px;
+}
+
+/* ===== USER DETAILS ===== */
+.card-email {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+/* ===== ACTION AREA ===== */
+.card-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 26px;
+  z-index: 1;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(135deg, #2563eb, #9333ea, #ec4899);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 10px 22px rgba(147, 51, 234, 0.28);
+}
+
+/* ===== BUTTON HOVER ===== */
+.btn:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 14px 28px rgba(236, 72, 153, 0.35);
+}
+
+/* ===== BUTTON ACTIVE ===== */
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* ===== STATUS ===== */
+.status {
+  text-align: center;
+  margin-top: 60px;
+
+  font-size: 26px;
+  font-weight: 600;
+
+  color: #334155;
+}
+
+/* ===== ERROR ===== */
+.error {
+  color: #ef4444;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+
+  .container {
+    padding: 40px 18px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .card-wrapper {
+    gap: 24px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+    min-height: auto;
+  }
+
+  .card-name {
+    font-size: 23px;
+  }
+
+  .card-email {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .card-action {
+    justify-content: center;
+  }
+}
